@@ -1,0 +1,290 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fullname": "John Doe",
+            "email": "john@gmail.com",
+            "password": "JohnDoe@001",
+            "balance": 34000
+        },
+        {
+            "id": 2,
+            "fullname": "Hinata Hyuga",
+            "email": "hinata@gmail.com",
+            "password": "Hinata@001",
+            "balance": 31371.931017843763
+        }
+    ],
+    "crypto": [
+        {
+            "id": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "icon": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+            "price": 3285553.73,
+            "change": 1.06,
+            "marketCap": 60.1,
+            "volume": 2.9,
+            "circulatingSupply": 18.8
+        },
+        {
+            "id": 2,
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "icon": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
+            "price": 216678.1,
+            "change": -5.49,
+            "marketCap": 25.4,
+            "volume": 2.3,
+            "circulatingSupply": 18.2
+        },
+        {
+            "id": 3,
+            "name": "Tether",
+            "symbol": "USDT",
+            "icon": "https://assets.coingecko.com/coins/images/325/large/Tether.png?1668148663",
+            "price": 216678.1,
+            "change": -5.49,
+            "marketCap": 25.4,
+            "volume": 5.5,
+            "circulatingSupply": 17.8
+        },
+        {
+            "id": 4,
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "icon": "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389",
+            "price": 74.31,
+            "change": 0.11,
+            "marketCap": 4.6,
+            "volume": 2.1,
+            "circulatingSupply": 12.8
+        },
+        {
+            "id": 5,
+            "name": "XRP",
+            "symbol": "XRP",
+            "icon": "https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731",
+            "price": 24942.54,
+            "change": -3.69,
+            "marketCap": 4.2,
+            "volume": 3.5,
+            "circulatingSupply": 23.5
+        },
+        {
+            "id": 6,
+            "name": "Polkadot",
+            "symbol": "PKD",
+            "icon": "https://assets.coingecko.com/coins/images/12171/large/polkadot.png?1639712644",
+            "price": 104.52,
+            "change": -1.82,
+            "marketCap": 3.4,
+            "volume": 5.3,
+            "circulatingSupply": 21.2
+        },
+        {
+            "id": 7,
+            "name": "Cardano",
+            "symbol": "ADA",
+            "icon": "https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860",
+            "price": 57.21,
+            "change": 1.11,
+            "marketCap": 2.7,
+            "volume": 4.2,
+            "circulatingSupply": 53.2
+        },
+        {
+            "id": 8,
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "icon": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256",
+            "price": 17.64,
+            "change": -6.96,
+            "marketCap": 2.3,
+            "volume": 3.4,
+            "circulatingSupply": 54.2
+        }
+    ],
+    "transactions": [
+        {
+            "id": 1,
+            "date": "2023-07-29T02:35:42",
+            "status": "SUCCESS",
+            "type": "SELL",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 1
+        },
+        {
+            "id": 2,
+            "date": "2023-06-23T02:35:42",
+            "status": "FAILURE",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 2
+        },
+        {
+            "id": 3,
+            "date": "2023-06-21T02:35:42",
+            "status": "PENDING",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 3
+        },
+        {
+            "id": 4,
+            "date": "2021-06-26T02:35:42",
+            "status": "FAILURE",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 1
+        },
+        {
+            "id": 5,
+            "date": "2022-06-24T02:35:42",
+            "status": "SUCCESS",
+            "type": "SELL",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 1
+        },
+        {
+            "id": 6,
+            "date": "2023-06-25T02:35:42",
+            "status": "PENDING",
+            "type": "sold",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 3
+        },
+        {
+            "id": 7,
+            "date": "2023-06-08T02:35:42",
+            "status": "SUCCESS",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 2,
+            "cryptoId": 2
+        },
+        {
+            "id": 8,
+            "date": "2023-06-14T02:35:42",
+            "status": "SUCCESS",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 2,
+            "cryptoId": 2
+        },
+        {
+            "id": 9,
+            "date": "2023-07-03T02:35:42",
+            "status": "SUCCESS",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 2
+        },
+        {
+            "id": 10,
+            "date": "2023-06-21T02:35:42",
+            "status": "SUCCESS",
+            "type": "BUY",
+            "price": 3234,
+            "quantity": 0.032343,
+            "description": "From Teja Minnikanti",
+            "user_id": 1,
+            "cryptoId": 2
+        }
+    ],
+    "watchlist": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "cryptoId": 1
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "cryptoId": 2
+        },
+        {
+            "id": 3,
+            "user_id": 1,
+            "cryptoId": 3
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 1,
+            "id": 4
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 3,
+            "id": 5
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 5,
+            "id": 6
+        }
+    ],
+    "wallet": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "cryptoId": 1,
+            "totalBalance": 0.47344
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "cryptoId": 2,
+            "totalBalance": 0.32
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 1,
+            "totalBalance": 0.00110966,
+            "id": 3
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 2,
+            "totalBalance": 0.02228273,
+            "id": 4
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 4,
+            "totalBalance": 58.19862012,
+            "id": 5
+        },
+        {
+            "user_id": 2,
+            "cryptoId": 6,
+            "totalBalance": 55.59407683,
+            "id": 6
+        }
+    ]
+}

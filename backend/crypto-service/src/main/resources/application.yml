@@ -1,0 +1,41 @@
+server:
+  port: 9006
+
+crypto:
+  api:
+    url:
+      https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,polkadot,binance-usd,dogecoin,usd-coin,tether,cardano,ripple&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h,24h,7d,14d,30d,200d,1y&locale=en
+spring:
+  application:
+    name: CRYPTO-SERVICE
+  datasource:
+    url:
+      jdbc:mysql://3.145.15.231:3306/BC87?useSSL=false&serverTimezone=UTC
+    username:
+      root
+    password:
+      Bootcamp@87
+
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:/db/migration
+    baseline-on-migrate: true
+    validate-on-migrate: false
+    mixed: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
+
+

@@ -1,0 +1,166 @@
+name: SonarCloud Backend
+on:
+  push:
+    branches:
+      - main # change it to your main branch.
+    paths:
+      - "backend/**" # give the backend folder name.
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  user-service: # Change the job name to a backend microservice name.
+    if: ( startsWith(github.head_ref, 'BE_') && github.event.pull_request.merged == false ) || ( github.event_name == 'push' )
+    name: BE User Service Sonar Analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 8 # Give the value at most 8 mins.
+    defaults:
+      run:
+        working-directory: ./backend/user-service # Change the working-directory to your microservice folder name.
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for better relevancy of analysis.
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: "zulu" # Alternative distribution options are available.
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.USER_SERVICE_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bootcamp-be-87-user-service # Change the projectKey to the Microservice project key.
+
+  transaction-service: # Change the job name to a backend microservice name.
+    if: ( startsWith(github.head_ref, 'BE_') && github.event.pull_request.merged == false ) || ( github.event_name == 'push' )
+    name: BE Transaction Service Sonar Analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 8 # Give the value at most 8 mins.
+    defaults:
+      run:
+        working-directory: ./backend/transaction-service # Change the working-directory to the microservice folder name.
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for better relevancy of analysis.
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: "zulu" # Alternative distribution options are available.
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.TRANSACTION_SERVICE_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bootcamp-be-87-transaction-service # Change the projectKey to the Microservice project key.
+
+  crypto-service: # Change the job name to a backend microservice name.
+    if: ( startsWith(github.head_ref, 'BE_') && github.event.pull_request.merged == false ) || ( github.event_name == 'push' )
+    name: BE Crypto Service Sonar Analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 8 # Give the value at most 8 mins.
+    defaults:
+      run:
+        working-directory: ./backend/crypto-service # Change the working-directory to your microservice folder name.
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for better relevancy of analysis.
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: "zulu" # Alternative distribution options are available.
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.CRYPTO_SERVICE_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bootcamp-be-87-crypto-service # Change the projectKey to the Microservice project key.
+
+  wallet-service: # Change the job name to a backend microservice name.
+    if: ( startsWith(github.head_ref, 'BE_') && github.event.pull_request.merged == false ) || ( github.event_name == 'push' )
+    name: BE Wallet Service Sonar Analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 8 # Give the value at most 8 mins.
+    defaults:
+      run:
+        working-directory: ./backend/wallet-service # Change the working-directory to your microservice folder name.
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for better relevancy of analysis.
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: "zulu" # Alternative distribution options are available.
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.WALLET_SERVICE_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=bootcamp-be-87-wallet-service # Change the projectKey to the Microservice project key.

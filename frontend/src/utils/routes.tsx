@@ -1,0 +1,16 @@
+export const SIGNIN_PATH = '/';
+export const SIGNUP_PATH = '/signup';
+export const FORGOT_PATH = '/forgot-password';
+export const RESET_CODE_PATH = '/reset-code/:email';
+export const RESET_PASSWORD_PATH = '/reset-password/:email';
+export const RESET_SUCCESS_PATH = '/reset-success';
+export const DASHBOARD_PATH = '/dashboard';
+export const PAYMENT_SUCCESS_BUY_PATH = '/buy-success/:value';
+export const PAYMENT_SUCCESS_SELL_PATH = '/sell-success/:value';
+export const PURCHASE_PATH = '/purchase/:id';
+export const SELL_PATH = '/sell/:id';
+export const TRADE_PATH = '/trade';
+export const WATCHLIST_PATH = '/watchlist';
+export const LOGOUT_PATH = '/logout';
+export const CURRENCY_DETAILS_PATH = '/currency/:id';
+export const CASH_WALLET_PATH = '/cash-wallet';
